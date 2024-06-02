@@ -1,0 +1,80 @@
+package com.example.project_part_2;
+import javafx.application.Application;
+
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+class Thread_handler implements Runnable {
+
+    Socket socket;
+    Thread thread;
+    RestaurantsManager restaurantsManager;
+    ObjectInputStream ois;
+    ObjectOutputStream oos;
+
+    ArrayList<Food> ordered_list;
+
+    HashMap<Customer,ArrayList<Food>> just_what_the_doctor_ordered;
+
+    Thread_handler(Socket socket, RestaurantsManager restaurantsManager) throws IOException {
+        this.socket=socket;
+        this.restaurantsManager=restaurantsManager;
+        thread = new Thread(this);
+        oos =new ObjectOutputStream(socket.getOutputStream());
+        ois =new ObjectInputStream(socket.getInputStream());
+        thread.start();
+    }
+
+
+    @Override
+    public void run() {
+
+
+
+        while(true)
+        {
+            try {
+                String flag=(String) ois.readObject();
+                System.out.println(flag);
+                if(flag.equals("C"))
+                {
+                    oos.writeObject(restaurantsManager);
+                }
+                if(flag.equals("O"))
+                {
+                    just_what_the_doctor_ordered=(HashMap<Customer,ArrayList<Food>>)ois.readObject();
+                    System.out.println(just_what_the_doctor_ordered);
+                }
+
+            } catch (IOException | ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+
+
+        }
+    }
+}
+
+
+
+public class RestaurantServer {
+
+    public static void main(String[] args) throws Exception
+    {
+        RestaurantsManager res_man= new RestaurantsManager();
+        ServerSocket serverSocket= new ServerSocket(1270);
+        res_man.Add_Datas_FromFile();
+
+
+        while(true)
+        {
+            Socket skt=serverSocket.accept();
+            System.out.println("Connected");
+            new Thread_handler(skt,res_man);
+        }
+
+    }
+}

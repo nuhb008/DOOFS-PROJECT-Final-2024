@@ -1,0 +1,10 @@
+My 1st one....
+Thanks for seeing My Repository!
+
+ *** Make Sure to change image Directory (I have commented out)
+ *** There's a console based app to naming "RESTAURANT MANAGING APP"....
+ *** It's just a simple combo of networking and JavaFx.... Kept as simple as possible you can add feature ;)
+
+ -Finally thanks a lot for giving a view
+
+                        Mansib :)

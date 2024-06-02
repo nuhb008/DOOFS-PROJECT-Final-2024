@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #28282B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_part_2.CustomerViewPageController">
+   <children>
+      <Label layoutX="30.0" layoutY="27.0" prefHeight="41.0" prefWidth="334.0" text="DOOFS SIGN-UP INTERFACE" textFill="#ff7e00">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="62.0" prefHeight="11.0" prefWidth="87.0" text="Customer" textFill="#00ffb0">
+         <font>
+            <Font name="ISOCTEUR" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="signupuser" layoutX="149.0" layoutY="144.0" prefHeight="33.0" prefWidth="302.0" style="-fx-background-color: #ccb69f;" />
+      <Label layoutX="149.0" layoutY="113.0" prefHeight="27.0" prefWidth="62.0" text="UserID:" textFill="#ff7e00">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="197.0" prefHeight="27.0" prefWidth="87.0" text="Password:" textFill="#ff7e00">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="signup2" layoutX="180.0" layoutY="293.0" mnemonicParsing="false" onAction="#signup_button_action" style="-fx-background-color: #ff7e00;" text="SIGN UP" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Condensed BT" size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="signuppass" layoutX="149.0" layoutY="224.0" prefHeight="33.0" prefWidth="302.0" style="-fx-background-color: #ccb69f;" />
+      <Button fx:id="BACK" layoutX="364.0" layoutY="292.0" mnemonicParsing="false" onAction="#go_back1" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #ff7e00;" text="Back" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Condensed BT" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

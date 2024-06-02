@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #28282B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_part_2.RestaurantLogInController">
+   <children>
+      <TextField fx:id="res_user" layoutX="162.0" layoutY="199.0" prefHeight="33.0" prefWidth="302.0" style="-fx-background-color: #ccb69f;" />
+      <Label layoutX="162.0" layoutY="168.0" prefHeight="27.0" prefWidth="121.0" text="Restaurant ID:" textFill="#ff7e00">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="res_log" layoutX="162.0" layoutY="243.0" mnemonicParsing="false" onAction="#res_log_action" prefHeight="41.0" prefWidth="89.0" style="-fx-background-color: #ff7e00;" text="LOGIN" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="17.0" prefHeight="41.0" prefWidth="237.0" text="DOOFS LOGIN INTERFACE" textFill="#ff7e00">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="34.0" prefHeight="45.0" prefWidth="103.0" text="Restaurant" textFill="#00ffb0">
+         <font>
+            <Font name="ISOCTEUR" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="b2b" layoutX="374.0" layoutY="243.0" mnemonicParsing="false" onAction="#b2b" prefHeight="41.0" prefWidth="89.0" style="-fx-background-color: #ff7e00;" text="BACK" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

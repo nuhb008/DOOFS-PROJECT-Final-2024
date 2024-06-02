@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="image" prefHeight="562.0" prefWidth="806.0" style="-fx-background-color: #28282B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_part_2.RestaurantOwnerViewController">
+   <children>
+      <Label layoutX="41.0" layoutY="15.0" prefHeight="45.0" prefWidth="198.0" text="DOOFS!!!" textFill="#ff7e00">
+         <font>
+            <Font name="Swiss 721 Bold Extended BT" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="54.0" prefHeight="17.0" prefWidth="264.0" text="EAT TO THE FULLEST...." textFill="#00ffb0">
+         <font>
+            <Font name="ISOCTEUR" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="97.0" prefHeight="28.0" prefWidth="57.0" text="NAME" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="97.0" prefHeight="28.0" prefWidth="57.0" text="PRICE" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="407.0" layoutY="97.0" prefHeight="28.0" prefWidth="57.0" text="SCORE" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="55.0" layoutY="125.0" prefHeight="32.0" prefWidth="210.0" text="NAME " textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="272.0" layoutY="125.0" text="PRICE " textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="score" layoutX="407.0" layoutY="125.0" text="SCORE " textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="live_table" layoutX="43.0" layoutY="178.0" prefHeight="284.0" prefWidth="434.0" style="-fx-background-color: #ccb69f;">
+        <columns>
+          <TableColumn fx:id="customerId" prefWidth="108.66668319702148" text="Customer Id." />
+          <TableColumn fx:id="order_line" prefWidth="323.3333282470703" text="ORDERS" />
+        </columns>
+      </TableView>
+      <Button fx:id="view" layoutX="43.0" layoutY="471.0" mnemonicParsing="false" onAction="#refresh_action" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #ff7e00;" text="REFRESH" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="381.0" layoutY="471.0" mnemonicParsing="false" onAction="#exit_action" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #ff7e00;" text="EXIT" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="view_order" layoutX="144.0" layoutY="471.0" mnemonicParsing="false" onAction="#view_order_details" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: #ff7e00;" text="VIEW ORDER" textFill="#00ffb0">
+         <font>
+            <Font name="Swiss 721 Black Extended BT" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="order_details" layoutX="498.0" layoutY="179.0" prefHeight="279.0" prefWidth="287.0" style="-fx-background-color: #ccb69f;">
+         <columns>
+            <TableColumn fx:id="food_name" prefWidth="208.6666259765625" text="Food Name" />
+            <TableColumn fx:id="food_price" prefWidth="78.00006103515625" text="Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="579.0" layoutY="141.0" prefHeight="28.0" prefWidth="125.0" text="ORDER DETAILS" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="497.0" prefHeight="28.0" prefWidth="69.0" text="Subtotal" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="price_details" layoutX="683.0" layoutY="496.0" text="0.00" textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="price_details1" layoutX="648.0" layoutY="489.0" text="\$" textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="464.0" prefHeight="28.0" prefWidth="101.0" text="Customer Id" textFill="#ff7e00">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userid" layoutX="648.0" layoutY="458.0" text="000" textAlignment="CENTER" textFill="#00ffb0">
+         <font>
+            <Font name="Eras Bold ITC" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

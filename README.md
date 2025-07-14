@@ -4,7 +4,7 @@
 ![SceneBuilder](https://img.shields.io/badge/SceneBuilder-GUI-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-DOOFS is a **JavaFX-based desktop food ordering application** developed as a final academic project. It simulates a local food delivery and reservation system, allowing users to browse menus, place orders, and manage them in real-time using a smooth graphical interface built with SceneBuilder.
+DOOFS is a **JavaFX-based desktop food ordering application** developed as a Javafx project. It simulates a local food delivery and reservation system, allowing users to browse menus, place orders, and manage them in real-time using a smooth graphical interface built with SceneBuilder.
 
 ---
 
@@ -25,15 +25,6 @@ DOOFS is a **JavaFX-based desktop food ordering application** developed as a fin
 - 🛒 Live order management panel
 - 💻 Local system – works without internet
 - 🧱 Designed using modular MVC structure
-
----
-
-## 📷 Screenshots
-
-> _You can include screenshots here for demo_
-
-![Main Screen](assets/screenshot1.png)
-![Order Summary](assets/screenshot2.png)
 
 ---
 
